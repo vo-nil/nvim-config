@@ -4,7 +4,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.spell = true
---vim.opt.spelllang = "en,ru"
+vim.opt.spelllang = "en,ru"
 
 vim.opt.list = true
 vim.opt.listchars = { tab = "→ ", extends = "", precedes = "", trail = "∙", eol = "" }

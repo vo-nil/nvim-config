@@ -53,21 +53,13 @@ require("lazy").setup({
     'mbbill/undotree',
 
     -- Detect tabstop and shiftwidth automatically
-    'tpope/vim-sleuth',
-    {
-        -- Add indentation guides even on blank lines
-        'lukas-reineke/indent-blankline.nvim',
-        -- Enable `lukas-reineke/indent-blankline.nvim`
-        -- See `:help indent_blankline.txt`
-        opts = {
-            char = '┊',
-            show_trailing_blankline_indent = false,
-        },
-    },
+    -- 'tpope/vim-sleuth',
+
+    -- Add indentation guides even on blank lines
+    { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
 
     -- "gc" to comment visual regions/lines
     { 'numToStr/Comment.nvim', opts = {} },
-
 
     {
         -- Set lualine as statusline
@@ -113,6 +105,9 @@ require("lazy").setup({
         build = ':TSUpdate',
     },
     'nvim-treesitter/playground',
+
+    -- highlight colors in code
+    'norcalli/nvim-colorizer.lua',
 
     -- telescope replacement?
     -- 'theprimeagen/harpoon',
