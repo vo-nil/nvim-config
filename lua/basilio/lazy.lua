@@ -112,44 +112,31 @@ require("lazy").setup({
     -- telescope replacement?
     -- 'theprimeagen/harpoon',
 
+    -- LSP Support --
+
+    -- manage lsps from nvim
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
+        lazy = true,
+        config = false,
+    },
 
-        -- manage lsps from nvim
-        {'williamboman/mason.nvim'},           -- Optional
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- LSP Support
-        {
-            'neovim/nvim-lspconfig',             -- Required
-            dependencies = {
-                {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            },
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+    {
+        'neovim/nvim-lspconfig',             -- Required
+        dependencies = {
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
         },
+    },
 
-        -- Autocompletion
-        {
-
-            'hrsh7th/nvim-cmp',         -- Required
-            dependencies = {
-                {'L3MON4D3/LuaSnip'},             -- Required
-            }
-            --[[
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-            -- Snippets
-            {'rafamadriz/friendly-snippets'}, -- Optional
-            ]]--
+    -- Autocompletion
+    {
+        'hrsh7th/nvim-cmp',         -- Required
+        dependencies = {
+            {'L3MON4D3/LuaSnip'},             -- Required
         }
     },
 

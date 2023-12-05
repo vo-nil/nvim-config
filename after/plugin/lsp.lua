@@ -1,4 +1,5 @@
 local lsp = require('lsp-zero')
+-- lsp.set_log_level("debug")
 
 lsp.preset('recommended')
 
@@ -21,6 +22,7 @@ cmp.setup({
 })
 
 lsp.on_attach(function(client, bufnr)
+    print("lsp attached")
 
     local nmap = function(keys, func, desc)
         if desc then
@@ -53,3 +55,11 @@ lsp.setup({
 vim.diagnostic.config({
     virtual_text = true
 })
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  handlers = {
+    lsp.default_setup,
+  },
+})
+
