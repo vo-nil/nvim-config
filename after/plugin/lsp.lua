@@ -22,7 +22,7 @@ cmp.setup({
 })
 
 lsp.on_attach(function(client, bufnr)
-    print("lsp attached")
+--    print("lsp attached")
 
     local nmap = function(keys, func, desc)
         if desc then
